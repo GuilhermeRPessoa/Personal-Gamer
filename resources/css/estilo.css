@@ -1,0 +1,22 @@
+/*
+*
+*@author Guilherme Pessoa
+*@version 0.1
+*/
+
+/*=================== layout ===================*/
+html, body{ /* colocar o height apenas no body não seria o suficiente para ele ocupar 100% da tela, pois o html não estaria ocupando 100% */
+	height: 100%;
+	overflow: auto;
+}
+
+
+/* -- Barra de navegação -- */
+.img-logo {
+	height: 40px;
+	width: 132px;
+	display: block;
+	background: url('img/pg.svg') no-repeat;
+	background-size: contain; /*isso vai definir que o background vai ter o mesmo tamanho definido na própria classe*/
+	color: transparent; /*para esconder o texto que é necessario manter para o caso da imagem não carregar*/
+}
