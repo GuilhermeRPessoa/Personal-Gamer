@@ -6,6 +6,6 @@
 	<title>Minha Conta - Personal Gamer</title>
 </head>
 <body>
-	teste
+	Bem vindo ao seu perfil
 </body>
 </html>

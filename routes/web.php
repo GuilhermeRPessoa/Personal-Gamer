@@ -14,7 +14,7 @@ Route::group(['middleware' => ['auth'], 'namespace' => 'Backend'], function () {
 
 /* --- Categorias --- */
 
-Route::group(['middleware' => [], 'namespace' => 'Backend'], function () {
+Route::group(['middleware' => ['auth'], 'namespace' => 'Backend'], function () {
     Route::get('categoria', 'CategoryController@index')->name('category.list');
     Route::get('categoria/criar', 'CategoryController@create')->name('category.create');
     Route::post('categoria/criar', 'CategoryController@store')->name('category.store');
@@ -24,3 +24,10 @@ Route::group(['middleware' => [], 'namespace' => 'Backend'], function () {
     Route::get('categoria/{id}/restaurar', 'CategoryController@restore')->name('category.restore');
     Route::get('categoria/{id}/excluir-permanentemente', 'CategoryController@destroyPermanently')->name('category.destroyPermanently');
 });
+
+
+Route::get('produtos', 'ProductController@index')->name('product.list');
+Route::get('produtos/criar', 'ProductController@create')->name('product.create');
+Route::post('produtos/criar', 'ProductController@store')->name('product.store');
+Route::get('produtos/{id}/editar', 'ProductController@edit')->name('product.edit');
+Route::put('produtos/{id}/editar', 'ProductController@update')->name('product.update');
